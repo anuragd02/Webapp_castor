@@ -49,11 +49,14 @@ with col1:
         st.write(f"**Prediction:** {predicted_class}")
         st.write(f"**Confidence:** {confidence:.2f}%")
 
+import pandas as pd
+
 with col2:
     st.subheader("Castor – Botrytis Grey Mold (BGM)")
 
     st.markdown("### Crop–Disease–Pathogen–Fungicide Overview")
-    st.table({
+
+    overview_df = pd.DataFrame({
         "Crop": ["Castor (Ricinus communis L.)"],
         "Disease": ["Botrytis Grey Mold (BGM)"],
         "Causal Pathogen": ["Botrytis cinerea Pers. ex Fr."],
@@ -63,24 +66,31 @@ with col2:
         ]
     })
 
-    st.markdown("### 🔍 Key Symptoms of Botrytis Grey Mold (BGM)")
+    st.dataframe(
+        overview_df,
+        use_container_width=True,
+        hide_index=True
+    )
+
+    st.markdown("### Key Symptoms of Botrytis Grey Mold (BGM)")
     st.markdown(
         """
         - Water-soaked lesions on spikes and floral parts  
         - Grey to brown discoloration of spikelets  
-        - Soft rot of flowers and capsules under humid conditions  
+        - Soft rotting of flowers and capsules under humid conditions  
         - Grey, fuzzy fungal growth visible during high humidity  
         - Premature drying and shrivelling of spike tissues  
         - Flower drop and poor capsule setting  
         - Musty odour from infected spikes during severe infection  
         - Rapid disease spread during cloudy weather and intermittent rainfall  
-        - Entire spike rot under prolonged infection  
+        - Entire spike rot under prolonged or severe infection  
         - Reduced seed size and inferior seed quality
         """
     )
 
     st.markdown("### Propiconazole 25 EC – Dose Optimization Strategy")
-    st.table({
+
+    dose_df = pd.DataFrame({
         "Goal": [
             "Maximum yield",
             "Cost-effective + high yield",
@@ -104,14 +114,20 @@ with col2:
         ]
     })
 
-    st.markdown("### 🧠 DSS-Based Advisory Recommendation")
+    st.dataframe(
+        dose_df,
+        use_container_width=True,
+        hide_index=True
+    )
+
+    st.markdown("### DSS-Based Advisory Recommendation")
     st.markdown(
         """
-        - **High BGM risk:** → Propiconazole 25 EC @ **2.5 ml/L**  
-        - **Moderate BGM risk:** → Propiconazole 25 EC @ **2.0 ml/L**  
-        - **Variable / unstable environment:** → Propiconazole 25 EC @ **1.5 ml/L**  
-        - **Early or mild infection:** → Propiconazole 25 EC @ **1.0 ml/L**  
-        - **Avoid:** **0.5 ml/L** due to poor disease suppression
+        - **High BGM risk** → Propiconazole 25 EC @ **2.5 ml/L**  
+        - **Moderate BGM risk** → Propiconazole 25 EC @ **2.0 ml/L**  
+        - **Variable / unstable environment** → Propiconazole 25 EC @ **1.5 ml/L**  
+        - **Early or mild infection** → Propiconazole 25 EC @ **1.0 ml/L**  
+        - **Avoid** → **0.5 ml/L** due to poor disease suppression
         """
     )
 
