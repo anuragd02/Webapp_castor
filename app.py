@@ -51,46 +51,67 @@ with col1:
 
 with col2:
     st.subheader("Castor – Botrytis Grey Mold (BGM)")
+
+    st.markdown("### Crop–Disease–Pathogen–Fungicide Overview")
+    st.table({
+        "Crop": ["Castor (Ricinus communis L.)"],
+        "Disease": ["Botrytis Grey Mold (BGM)"],
+        "Causal Pathogen": ["Botrytis cinerea Pers. ex Fr."],
+        "Fungicide Used": ["Propiconazole 25 EC"],
+        "Mode of Action": [
+            "Systemic triazole fungicide; inhibits ergosterol biosynthesis (DMI)"
+        ]
+    })
+
+    st.markdown("### 🔍 Key Symptoms of Botrytis Grey Mold (BGM)")
     st.markdown(
         """
-        **Crop–Disease–Pathogen–Fungicide Summary:**
-        
-        - **Crop:** Castor (*Ricinus communis* L.)
-        - **Disease:** Botrytis Grey Mold (BGM)
-        - **Causal Pathogen:** *Botrytis cinerea* Pers. ex Fr.
-        - **Fungicide Used:** Propiconazole 25 EC
-        - **Mode of Action:** Systemic triazole fungicide; inhibits ergosterol biosynthesis (DMI)
+        - Water-soaked lesions on spikes and floral parts  
+        - Grey to brown discoloration of spikelets  
+        - Soft rot of flowers and capsules under humid conditions  
+        - Grey, fuzzy fungal growth visible during high humidity  
+        - Premature drying and shrivelling of spike tissues  
+        - Flower drop and poor capsule setting  
+        - Musty odour from infected spikes during severe infection  
+        - Rapid disease spread during cloudy weather and intermittent rainfall  
+        - Entire spike rot under prolonged infection  
+        - Reduced seed size and inferior seed quality
+        """
+    )
 
-        **Symptoms of Botrytis Grey Mold (BGM):**
-        - Initial water-soaked lesions appear on spikes or floral parts
-        - Grey to brown discoloration on affected spikelets
-        - Soft rotting of flowers and capsules, especially under humid conditions
-        - Grey, fuzzy fungal growth (spore mass) visible during high humidity
-        - Premature drying and shrivelling of spike tissues
-        - Flower drop and poor capsule setting leading to yield loss
-        - Musty odour from infected spikes under severe infection
-        - Rapid disease spread during cloudy weather and intermittent rainfall
-        - Entire spike may rot under prolonged or severe infection
-        - Reduced seed size and poor seed quality in harvested produce
+    st.markdown("### Propiconazole 25 EC – Dose Optimization Strategy")
+    st.table({
+        "Goal": [
+            "Maximum yield",
+            "Cost-effective + high yield",
+            "Most stable across environments",
+            "Low disease pressure",
+            "Not recommended"
+        ],
+        "Best Treatment": [
+            "2.5 ml/L",
+            "2.0 ml/L",
+            "1.5 ml/L",
+            "1.0 ml/L",
+            "0.5 ml/L"
+        ],
+        "Why": [
+            "Highest yield and maximum benefit–cost ratio",
+            "Yield close to maximum with reduced input cost",
+            "Best AMMI stability and consistent performance",
+            "Adequate disease control with minimal cost",
+            "Insufficient disease control and low economic returns"
+        ]
+    })
 
-        **Propiconazole 25 EC – Dose Recommendation:**
-        - **Maximum Yield:**  
-          - *2.5 ml/L* – Highest yield and maximum benefit–cost ratio
-        - **Cost-Effective with High Yield:**  
-          - *2.0 ml/L* – Yield close to maximum with reduced input cost
-        - **Stable Across Environments:**  
-          - *1.5 ml/L* – Best AMMI stability and consistent performance
-        - **Low Disease Pressure:**  
-          - *1.0 ml/L* – Adequate control with minimal cost
-        - **Not Recommended:**  
-          - *0.5 ml/L* – Insufficient disease control and low economic returns
-
-        **Decision Support System (DSS) Advisory:**
-        - If **BGM risk is High** → Recommend *Propiconazole 25 EC @ 2.5 ml/L*
-        - If **BGM risk is Moderate** → Recommend *Propiconazole 25 EC @ 2.0 ml/L*
-        - If **environment is variable or unstable** → Recommend *Propiconazole 25 EC @ 1.5 ml/L*
-        - If **early or mild infection** → Recommend *Propiconazole 25 EC @ 1.0 ml/L*
-        - **Avoid:** *0.5 ml/L* due to poor disease suppression
+    st.markdown("### 🧠 DSS-Based Advisory Recommendation")
+    st.markdown(
+        """
+        - **High BGM risk:** → Propiconazole 25 EC @ **2.5 ml/L**  
+        - **Moderate BGM risk:** → Propiconazole 25 EC @ **2.0 ml/L**  
+        - **Variable / unstable environment:** → Propiconazole 25 EC @ **1.5 ml/L**  
+        - **Early or mild infection:** → Propiconazole 25 EC @ **1.0 ml/L**  
+        - **Avoid:** **0.5 ml/L** due to poor disease suppression
         """
     )
 
