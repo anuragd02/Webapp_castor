@@ -50,24 +50,68 @@ with col1:
         st.write(f"**Confidence:** {confidence:.2f}%")
 
 with col2:
-    st.subheader("Caster Disease Information")
+    st.subheader("Castor – Botrytis Grey Mold (BGM)")
     st.markdown(
         """
-        **Caster Disease Overview:**
-        Caster plants can be affected by various diseases that impact growth and yield.
+        **Crop–Disease–Pathogen–Fungicide Summary:**
         
-        **Common Diseases:**
-        - **Fungal Infections** – Caused by *Fusarium wilt*, *Alternaria*, etc.
-        - **Bacterial Wilt** – Affects leaf structure and plant health.
-        - **Viral Infections** – Spread through insects and poor soil health.
-        
-        **Treatment & Prevention:**
-        - Use disease-resistant varieties.
-        - Maintain proper soil moisture and drainage.
-        - Apply fungicides like *Mancozeb 75% WP* or *Copper Oxychloride 50% WP*.
-        - Rotate crops to reduce soil-borne diseases.
+        - **Crop:** Castor (*Ricinus communis* L.)
+        - **Disease:** Botrytis Grey Mold (BGM)
+        - **Causal Pathogen:** *Botrytis cinerea* Pers. ex Fr.
+        - **Fungicide Used:** Propiconazole 25 EC
+        - **Mode of Action:** Systemic triazole fungicide; inhibits ergosterol biosynthesis (DMI)
+
+        **Symptoms of Botrytis Grey Mold (BGM):**
+        - Initial water-soaked lesions appear on spikes or floral parts
+        - Grey to brown discoloration on affected spikelets
+        - Soft rotting of flowers and capsules, especially under humid conditions
+        - Grey, fuzzy fungal growth (spore mass) visible during high humidity
+        - Premature drying and shrivelling of spike tissues
+        - Flower drop and poor capsule setting leading to yield loss
+        - Musty odour from infected spikes under severe infection
+        - Rapid disease spread during cloudy weather and intermittent rainfall
+        - Entire spike may rot under prolonged or severe infection
+        - Reduced seed size and poor seed quality in harvested produce
+
+        **Propiconazole 25 EC – Dose Recommendation:**
+        - **Maximum Yield:**  
+          - *2.5 ml/L* – Highest yield and maximum benefit–cost ratio
+        - **Cost-Effective with High Yield:**  
+          - *2.0 ml/L* – Yield close to maximum with reduced input cost
+        - **Stable Across Environments:**  
+          - *1.5 ml/L* – Best AMMI stability and consistent performance
+        - **Low Disease Pressure:**  
+          - *1.0 ml/L* – Adequate control with minimal cost
+        - **Not Recommended:**  
+          - *0.5 ml/L* – Insufficient disease control and low economic returns
+
+        **Decision Support System (DSS) Advisory:**
+        - If **BGM risk is High** → Recommend *Propiconazole 25 EC @ 2.5 ml/L*
+        - If **BGM risk is Moderate** → Recommend *Propiconazole 25 EC @ 2.0 ml/L*
+        - If **environment is variable or unstable** → Recommend *Propiconazole 25 EC @ 1.5 ml/L*
+        - If **early or mild infection** → Recommend *Propiconazole 25 EC @ 1.0 ml/L*
+        - **Avoid:** *0.5 ml/L* due to poor disease suppression
         """
     )
 
 st.markdown("---")
-st.write("Developed by Anurag using Streamlit ❤️")
+st.markdown(
+    """
+    <style>
+    .developed-by {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .person {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    </style>
+    <div class="developed-by">Developed by</div>
+    <div class="person"><b>Anurag Dhole</b> - Researcher at MIT, Manipal</div>
+    <div class="person"><b>Dr. Jadesha G</b> - Assistant Professor at GKVK, UAS, Bangalore</div>
+    <div class="person"><b>Dr. Deepak D.</b> - Professor at MIT, Manipal</div>
+    """,
+    unsafe_allow_html=True
+)
