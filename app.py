@@ -49,80 +49,55 @@ with col1:
         st.write(f"**Prediction:** {predicted_class}")
         st.write(f"**Confidence:** {confidence:.2f}%")
 
-import pandas as pd
-
 with col2:
     st.subheader("Castor – Botrytis Grey Mold (BGM)")
 
     st.markdown("### 🌱 Crop–Disease–Pathogen–Fungicide Overview")
 
-    overview_df = pd.DataFrame({
-        "Crop": ["Castor\n(Ricinus communis L.)"],
-        "Disease": ["Botrytis Grey Mold\n(BGM)"],
-        "Causal Pathogen": ["Botrytis cinerea\nPers. ex Fr."],
-        "Fungicide Used": ["Propiconazole\n25 EC"],
-        "Mode of Action": [
-            "Systemic triazole fungicide\n"
-            "Inhibits ergosterol biosynthesis (DMI)"
-        ]
-    })
-
-    # Remove index for clean display
-    overview_df.index = [""]
-
-    st.table(overview_df)
-
-    st.markdown("### 🔍 Key Symptoms of Botrytis Grey Mold (BGM)")
     st.markdown(
         """
-        - Water-soaked lesions on spikes and floral parts  
-        - Grey to brown discoloration of spikelets  
+        | Crop | Disease | Causal Pathogen | Fungicide Used | Mode of Action |
+        |------|---------|----------------|---------------|----------------|
+        | **Castor** (*Ricinus communis* L.) | **Botrytis Grey Mold (BGM)** | *Botrytis cinerea* Pers. ex Fr. | **Propiconazole 25 EC** | Systemic triazole fungicide; inhibits ergosterol biosynthesis (DMI) |
+        """
+    )
+
+    st.markdown("### 🔍 Symptoms of Botrytis Grey Mold (BGM)")
+    st.markdown(
+        """
+        - Initial water-soaked lesions on spikes and floral parts  
+        - Grey to brown discoloration of affected spikelets  
         - Soft rotting of flowers and capsules under humid conditions  
         - Grey, fuzzy fungal growth visible during high humidity  
         - Premature drying and shrivelling of spike tissues  
-        - Flower drop and poor capsule setting  
+        - Flower drop and poor capsule setting leading to yield loss  
         - Musty odour from infected spikes during severe infection  
         - Rapid spread during cloudy weather and intermittent rainfall  
-        - Entire spike rot under severe or prolonged infection  
+        - Entire spike may rot under severe or prolonged infection  
         - Reduced seed size and poor seed quality
         """
     )
 
-    st.markdown("### 💊 Propiconazole 25 EC – Dose Optimization Strategy")
+    st.markdown("### 💊 Propiconazole 25 EC – Dose Recommendation Strategy")
 
-    dose_df = pd.DataFrame({
-        "Goal": [
-            "Maximum yield",
-            "Cost-effective + high yield",
-            "Most stable across environments",
-            "Low disease pressure",
-            "Not recommended"
-        ],
-        "Best Treatment": [
-            "2.5 ml/L",
-            "2.0 ml/L",
-            "1.5 ml/L",
-            "1.0 ml/L",
-            "0.5 ml/L"
-        ],
-        "Why": [
-            "Highest yield and maximum benefit–cost ratio",
-            "Yield close to maximum with reduced input cost",
-            "Best AMMI stability and consistent performance",
-            "Adequate disease control with minimal cost",
-            "Insufficient disease control and low economic returns"
-        ]
-    })
+    st.markdown(
+        """
+        | Goal | Best Treatment | Why |
+        |------|----------------|-----|
+        | **Maximum yield** | **2.5 ml/L** | Highest yield and maximum benefit–cost ratio |
+        | **Cost-effective + high yield** | **2.0 ml/L** | Yield close to maximum with reduced input cost |
+        | **Most stable across environments** | **1.5 ml/L** | Best AMMI stability and consistent performance |
+        | **Low disease pressure** | **1.0 ml/L** | Adequate disease control with minimal cost |
+        | **Not recommended** | **0.5 ml/L** | Insufficient disease control and low economic returns |
+        """
+    )
 
-    dose_df.index = [""] * len(dose_df)
-    st.table(dose_df)
-
-    st.markdown("### 🧠 DSS-Based Advisory Recommendation")
+    st.markdown("### 🧠 DSS-Based Advisory")
     st.markdown(
         """
         - **High BGM risk** → Propiconazole 25 EC @ **2.5 ml/L**  
         - **Moderate BGM risk** → Propiconazole 25 EC @ **2.0 ml/L**  
-        - **Variable or unstable environment** → Propiconazole 25 EC @ **1.5 ml/L**  
+        - **Variable / unstable environment** → Propiconazole 25 EC @ **1.5 ml/L**  
         - **Early or mild infection** → Propiconazole 25 EC @ **1.0 ml/L**  
         - **Avoid** → **0.5 ml/L** due to poor disease suppression
         """
