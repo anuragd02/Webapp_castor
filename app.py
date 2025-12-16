@@ -57,12 +57,13 @@ with col2:
     st.markdown("### Crop–Disease–Pathogen–Fungicide Overview")
 
     overview_df = pd.DataFrame({
-        "Crop": ["Castor (Ricinus communis L.)"],
-        "Disease": ["Botrytis Grey Mold (BGM)"],
-        "Causal Pathogen": ["Botrytis cinerea Pers. ex Fr."],
-        "Fungicide Used": ["Propiconazole 25 EC"],
+        "Crop": ["Castor\n(Ricinus communis L.)"],
+        "Disease": ["Botrytis Grey Mold\n(BGM)"],
+        "Causal Pathogen": ["Botrytis cinerea\nPers. ex Fr."],
+        "Fungicide Used": ["Propiconazole\n25 EC"],
         "Mode of Action": [
-            "Systemic triazole fungicide; inhibits ergosterol biosynthesis (DMI)"
+            "Systemic triazole fungicide\n"
+            "Inhibits ergosterol biosynthesis (DMI)"
         ]
     })
 
@@ -152,3 +153,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
