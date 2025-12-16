@@ -52,7 +52,7 @@ with col1:
 with col2:
     st.subheader("Castor – Botrytis Grey Mold (BGM)")
 
-    st.markdown("### 🌱 Crop–Disease–Pathogen–Fungicide Overview")
+    st.markdown("### Crop–Disease–Pathogen–Fungicide Overview")
 
     st.markdown(
         """
@@ -62,7 +62,7 @@ with col2:
         """
     )
 
-    st.markdown("### 🔍 Symptoms of Botrytis Grey Mold (BGM)")
+    st.markdown("### Symptoms of Botrytis Grey Mold (BGM)")
     st.markdown(
         """
         - Initial water-soaked lesions on spikes and floral parts  
@@ -78,7 +78,7 @@ with col2:
         """
     )
 
-    st.markdown("### 💊 Propiconazole 25 EC – Dose Recommendation Strategy")
+    st.markdown("### Propiconazole 25 EC – Dose Recommendation Strategy")
 
     st.markdown(
         """
@@ -92,7 +92,7 @@ with col2:
         """
     )
 
-    st.markdown("### 🧠 DSS-Based Advisory")
+    st.markdown("### DSS-Based Advisory")
     st.markdown(
         """
         - **High BGM risk** → Propiconazole 25 EC @ **2.5 ml/L**  
@@ -124,3 +124,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
