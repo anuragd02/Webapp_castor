@@ -32,14 +32,12 @@ with col1:
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption="Uploaded Image", use_container_width=True)
-        
-        # ✅ Preprocess the image (Resize to 64x64 to match model input)
-        img = image.resize((64, 64))  # Change from (224, 224) to (64, 64)
-        img_array = np.array(img) / 255.0  # Normalize pixel values
-        img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
 
-        # ✅ Ensure the correct shape before prediction
-        img_array = img_array.astype(np.float32)  
+        # Preprocess the image (Resize to 64x64 to match model input)
+        img = image.resize((64, 64))
+        img_array = np.array(img) / 255.0
+        img_array = np.expand_dims(img_array, axis=0)
+        img_array = img_array.astype(np.float32)
 
         # Make prediction
         predictions = model.predict(img_array)
@@ -48,6 +46,18 @@ with col1:
 
         st.write(f"**Prediction:** {predicted_class}")
         st.write(f"**Confidence:** {confidence:.2f}%")
+
+        # ✅ SHOW SPRAY ADVISORY ONLY IF UNHEALTHY
+        if predicted_class == "Unhealthy":
+            st.warning(
+                """
+                **Spray Advisory**
+
+                - Spray **Propiconazole 25 EC @ 2.0 ml per litre of water** during the **early morning or late afternoon** to ensure effective disease control.
+                - Under **rainy or highly humid conditions**, repeat the spray at recommended intervals to maintain protection and prevent disease spread.
+                - Ensure **uniform coverage of the spike** during application.
+                """
+            )
 
 with col2:
     st.subheader("Castor – Botrytis Grey Mold (BGM)")
@@ -124,4 +134,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
