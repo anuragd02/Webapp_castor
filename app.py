@@ -47,6 +47,20 @@ with col1:
         st.write(f"**Prediction:** {predicted_class}")
         st.write(f"**Confidence:** {confidence:.2f}%")
 
+        st.markdown("---")
+        st.markdown("### DSS Validation Performance")
+        
+        col_a, col_b = st.columns(2)
+        
+        with col_a:
+            st.metric("Accuracy", "95.99%")
+            st.metric("Sensitivity", "96.74%")
+            st.metric("Specificity", "94.05%")
+        
+        with col_b:
+            st.metric("False Alarm Rate", "5.95%")
+            st.metric("Missed Detection Rate", "3.26%")
+
         # ✅ SHOW SPRAY ADVISORY ONLY IF UNHEALTHY
         if predicted_class == "Unhealthy":
             st.warning(
